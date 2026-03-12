@@ -428,21 +428,3 @@ summary = pd.DataFrame({
     'Status'       : ['✅ Saved', '✅ Saved', '✅ Function Ready'],
 })
 print(summary.to_string(index=False))
-
-print("""
-═══════════════════════════════════════════════════════════
-PROJECT SUMMARY
-═══════════════════════════════════════════════════════════
-This notebook covers:
-  1. Exploratory Data Analysis across 3 datasets
-  2. Feature Engineering with label encoding + date features
-  3. Regression Model (Random Forest) for flight price prediction
-  4. Classification Model (Random Forest) for gender prediction
-  5. Recommendation System for hotel suggestions
-
-All models are saved as .pkl files for serving via Flask API.
-Next steps: Docker → Kubernetes → Airflow → Jenkins → MLflow
-
-GitHub Repo : https://github.com/[your-username]/travel-mlops-capstone
-═══════════════════════════════════════════════════════════
-""")
