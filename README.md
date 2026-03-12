@@ -84,7 +84,7 @@ MLflow 2.9+
 
 ### Step 1: Clone & Install
 ```bash
-git clone https://github.com/[your-username]/travel-mlops-capstone.git
+git clone 
 cd travel-mlops-capstone
 pip install -r requirements.txt
 ```
@@ -338,8 +338,3 @@ pytest tests/ -v
 ```
 
 ---
-
-## 👤 Author
-- **Name**: [Your Name]
-- **Course**: MLOps Capstone
-- **GitHub**: https://github.com/[your-username]/travel-mlops-capstone
