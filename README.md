@@ -1,4 +1,4 @@
-# 🌍 Travel Intelligence & Recommendation System
+# 🌍 Integrating_MLOps_in_Travel
 
 > Advanced machine learning platform for travel data analytics, predictive pricing, and customer profiling. Built with production-grade MLOps infrastructure.
 
