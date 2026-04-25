@@ -1,17 +1,4 @@
-───────────────────────────────────────────────────────────────────────────# ============================================================
-# CELL 1: Mount Drive & Install Dependencies
-# ============================================================
-"""
-# Run this cell FIRST in Google Colab
-from google.colab import drive
-drive.mount('/content/drive')
 
-!pip install mlflow scikit-learn pandas numpy matplotlib seaborn -q
-"""
-
-# ============================================================
-# CELL 2: Import Libraries
-# ============================================================
 import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
@@ -30,13 +17,6 @@ import os
 
 print("All libraries imported successfully!")
 
-# ============================================================
-# CELL 3: Load Datasets
-# ============================================================
-# If using Colab: upload files or read from Drive
-# flights = pd.read_csv('/content/drive/MyDrive/travel_capstone/flights.csv')
-# hotels  = pd.read_csv('/content/drive/MyDrive/travel_capstone/hotels.csv')
-# users   = pd.read_csv('/content/drive/MyDrive/travel_capstone/users.csv')
 
 # For local use:
 flights = pd.read_csv('data/flights.csv')
@@ -50,9 +30,6 @@ print(f"\nFlights  : {flights.shape[0]:,} rows × {flights.shape[1]} columns")
 print(f"Hotels   : {hotels.shape[0]:,} rows × {hotels.shape[1]} columns")
 print(f"Users    : {users.shape[0]:,} rows × {users.shape[1]} columns")
 
-# ============================================================
-# CELL 4: Exploratory Data Analysis (EDA)
-# ============================================================
 print("\n" + "=" * 60)
 print("EDA — FLIGHTS DATASET")
 print("=" * 60)
@@ -79,9 +56,7 @@ print(hotels.head())
 print("\nTop Hotel Destinations:")
 print(hotels['place'].value_counts().head(10))
 
-# ============================================================
-# CELL 5: EDA Visualizations
-# ============================================================
+
 fig, axes = plt.subplots(2, 3, figsize=(18, 10))
 fig.suptitle('Travel MLOps — Exploratory Data Analysis', fontsize=16, fontweight='bold')
 
@@ -137,9 +112,6 @@ plt.savefig('docs/eda_visualizations.png', dpi=150, bbox_inches='tight')
 plt.show()
 print("EDA visualizations saved.")
 
-# ============================================================
-# CELL 6: Feature Engineering
-# ============================================================
 print("\n" + "=" * 60)
 print("FEATURE ENGINEERING")
 print("=" * 60)
@@ -191,9 +163,6 @@ print(f"\nClassification Features: {CLF_FEATURES}")
 print(f"Target Variable       : gender ({le_gender.classes_})")
 print(f"Total Training Rows   : {len(df_clf):,}")
 
-# ============================================================
-# CELL 7: REGRESSION MODEL — Flight Price Prediction
-# ============================================================
 print("\n" + "=" * 60)
 print("REGRESSION MODEL — FLIGHT PRICE PREDICTION")
 print("=" * 60)
@@ -263,9 +232,7 @@ joblib.dump(le_type,   'models/le_flighttype.pkl')
 joblib.dump(le_agency, 'models/le_agency.pkl')
 print("\n✅ Regression model saved!")
 
-# ============================================================
-# CELL 8: CLASSIFICATION MODEL — Gender Prediction
-# ============================================================
+
 print("\n" + "=" * 60)
 print("CLASSIFICATION MODEL — GENDER PREDICTION")
 print("=" * 60)

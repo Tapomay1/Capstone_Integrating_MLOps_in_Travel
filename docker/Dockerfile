@@ -1,9 +1,3 @@
-# ─────────────────────────────────────────────────────────────────
-# Dockerfile — Travel MLOps Flask API
-# Build:  docker build -t travel-mlops-api .
-# Run:    docker run -p 5000:5000 travel-mlops-api
-# ─────────────────────────────────────────────────────────────────
-
 FROM python:3.10-slim
 
 # Set working directory

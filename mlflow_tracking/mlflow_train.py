@@ -1,10 +1,3 @@
-"""
-MLflow Model Tracking — Travel MLOps
-Tracks experiments, parameters, metrics, and model artifacts for both models.
-Run: python mlflow_tracking/mlflow_train.py
-Then: mlflow ui  (opens at http://localhost:5000)
-"""
-
 import mlflow
 import mlflow.sklearn
 import pandas as pd
